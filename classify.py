@@ -6,6 +6,7 @@ from sklearn.metrics import accuracy_score
 from nltk import tokenize
 import pickle
 
+
 def get_preds(cache_name, test):
     m,v = pickle.load(open(cache_name, 'rb'))
     test = [" ".join(tokenize.word_tokenize(t)) for t in test]
